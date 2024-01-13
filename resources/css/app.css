@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer components {
+    ._btn {
+        @apply rounded-lg text-sm px-5 py-2 transition-all font-medium capitalize whitespace-nowrap
+    }
+
+    ._btn-default {
+        @apply focus:outline-none border dark:border-gray-700 border-gray-400 dark:text-white text-gray-700
+        focus:ring-4 dark:focus:ring-gray-800
+        focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 bg-gray-300 hover:bg-gray-400 hover:text-gray-100
+    }
+
+    ._btn-primary {
+        @apply text-blue-100 bg-blue-700 hover:bg-blue-400 hover:text-blue-600 focus:ring-4 focus:ring-blue-300
+        focus:outline-none dark:focus:ring-blue-800
+    }
+
+    ._btn-success {
+        @apply focus:outline-none text-green-50 focus:ring-4 focus:ring-green-300 bg-green-600 hover:bg-green-400
+        hover:text-green-600 dark:focus:ring-green-800
+
+    }
+
+    ._btn-danger {
+        @apply focus:outline-none text-red-50 focus:ring-4 focus:ring-red-300 bg-red-600 hover:bg-red-400
+        hover:text-red-600 dark:focus:ring-red-800
+
+    }
+
+    ._btn-warning {
+        @apply focus:outline-none text-orange-50 focus:ring-4 focus:ring-orange-300 bg-orange-600 hover:bg-orange-400
+        hover:text-orange-600 dark:focus:ring-orange-800
+
+    }
+
+    ._btn-success._disabled, ._btn-danger._disabled, ._btn-primary._disabled, ._btn-warning._disabled, ._disabled {
+        @apply focus:ring-0 cursor-not-allowed
+        focus:outline-none border dark:border-gray-600 border-gray-300 dark:text-gray-400 text-gray-400
+        dark:bg-gray-700 dark:hover:bg-gray-700 bg-gray-200 hover:bg-gray-200 hover:text-gray-400
+    }
+
+    .form_input_empty {
+        @apply text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 dark:text-white
+        dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0
+    }
+
+    .form_input {
+        @apply bg-slate-50 border border-gray-300 text-gray-900 text-sm
+        rounded-lg focus:ring-blue-500 focus:border-blue-500 block
+        w-full p-2.5 dark:bg-slate-800 dark:border-slate-700 dark:placeholder-gray-400
+        dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+    }
+
+    .form_input._disabled {
+        @apply bg-slate-200 border border-gray-300 text-gray-700 text-sm
+        rounded-lg focus:ring-blue-500 focus:border-blue-500 block
+        w-full p-2.5 dark:bg-slate-700 dark:border-slate-700 dark:placeholder-gray-400
+        dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+    }
+
+    .form_checkBox {
+        @apply w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-4 focus:ring-blue-300
+        dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800
+    }
+
+    .float_input {
+        @apply block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300
+        appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600
+    }
+
+    .float_label {
+        @apply peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform
+        -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500
+        peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6
+    }
+
+    ._dropdown_link {
+        @apply block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white
+    }
+
+    ._dropdown_menu {
+        @apply backdrop-blur dark:bg-gray-700/70 bg-gray-200/70 dark:text-gray-100 text-gray-800 shadow
+        border dark:border-gray-700 border-gray-300
+    }
+
+    ._box_select {
+        @apply flex p-5 text-gray-600 bg-white
+        border border-gray-300 shadow rounded-lg cursor-pointer dark:hover:text-gray-300
+        dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600
+        peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-300
+        dark:bg-gray-800 dark:hover:bg-gray-700
+    }
+
+    ._tooltip {
+        @apply absolute z-10 invisible inline-block px-3 py-1.5 text-sm font-medium text-white
+        transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-600
+    }
+}
+

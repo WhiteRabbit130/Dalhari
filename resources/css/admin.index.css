@@ -1,0 +1,27 @@
+/* admin.index.js */
+
+/* small buttons on DataTable */
+#instruments-table button {
+    font-size: 0.8rem;
+    padding: 0.3rem 1.3rem !important;
+    margin: 0 auto;
+}
+
+#instruments-table_wrapper,
+#users-table_wrapper
+{
+    overflow-x:auto;
+}
+
+
+
+
+
+/* Mobile only */
+@media (max-width: 640px) {
+}
+
+/* Desktop only */
+@media (min-width: 640px) {
+}
+
