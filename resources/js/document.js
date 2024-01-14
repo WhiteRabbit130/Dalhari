@@ -7,8 +7,8 @@
 
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header';
-// import Paragraph from "@editorjs/paragraph";
-import Paragraph from "editorjs-paragraph-with-alignment";
+import Paragraph from "@editorjs/paragraph";
+// import Paragraph from "editorjs-paragraph-with-alignment";
 import List from '@editorjs/list';
 import NestedList from '@editorjs/nested-list';
 import Checklist from '@editorjs/checklist';
@@ -72,20 +72,17 @@ let activeDoc = null;
 // Initialize Editor.js
 let editor = new EditorJS({
   holder: 'editor-js',
-  // inlineToolbar: ['bold', 'italic', 'underline', 'marker', 'fontFamily', 'fontSize'],
   tools: {
-    // header: {
-    //   class: Header,
-    //   // tunes: ["anyTuneName"],
-    //   // inlineToolbar: true,
-
-    //   // shortcut: 'CMD+SHIFT+H',
-    //   // config: {
-    //   //   placeholder: 'Enter a header',
-    //   //   defaultLevel: 3
-    //   // }
-    // },
-    // header: Header,
+    header: {
+      class: Header,
+      // tunes: ["anyTuneName"],
+      inlineToolbar: true,
+      shortcut: 'CMD+SHIFT+H',
+      config: {
+        placeholder: 'Enter a header',
+        defaultLevel: 3
+      }
+    },
     paragraph: {
       class: Paragraph,
       inlineToolbar: true

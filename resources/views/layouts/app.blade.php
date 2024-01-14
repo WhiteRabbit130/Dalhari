@@ -17,10 +17,10 @@
     <link href="{{ asset('assets/styles/styles.css') }}" rel="stylesheet">
 
     {{--todo - only load where needed--}}
-    <link href="//cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <!-- <link href="//cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" /> -->
     {{--youcef  --}}
     <link rel="stylesheet" href="{{url('css/_icons.css')}}">
-    <script src="//cdn.tailwindcss.com"></script>
+    <!-- <script src="//cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -28,11 +28,11 @@
                 'collapse',
             ],
         }
-    </script>
-    <link rel="stylesheet" href="/css/main.css"/>
-
+    </script> -->
+    
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="/css/main.css"/>
 
 
     @stack('css')
