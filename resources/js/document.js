@@ -25,6 +25,7 @@ import TextAlign from "@canburaks/text-align-editorjs";
 import AlignmentTuneTool from "editorjs-text-alignment-blocktune";
 import Quote from '@editorjs/quote';
 import Warning from '@editorjs/warning';
+import Alert from 'editorjs-alert';
 import Marker from '@editorjs/marker';
 import CodeTool from '@editorjs/code';
 import InlineCode from '@editorjs/inline-code';
@@ -116,6 +117,15 @@ let editor = new EditorJS({
       config: {
         titlePlaceholder: 'Title',
         messagePlaceholder: 'Message',
+      },
+    },
+    alert: {
+      class: Alert,
+      inlineToolbar: true,
+      shortcut: 'CMD+SHIFT+A',
+      config: {
+        defaultType: 'primary',
+        messagePlaceholder: 'Enter something',
       },
     },
     embed: {

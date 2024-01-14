@@ -42,6 +42,7 @@
         "@medistream/editorjs-image": "^2.9.4",
         "@syncfusion/ej2-documenteditor": "^24.1.45",
         "@syncfusion/ej2-pdf-export": "^24.1.41",
+        "editorjs-alert": "^1.1.3",
         "editorjs-html": "^3.4.3",
         "editorjs-inline-font-family-tool": "^1.0.4",
         "editorjs-inline-font-size-tool": "^1.0.1",
