@@ -18,7 +18,6 @@
             {{ __('Document') }}
         </h2>
     </x-slot>
-
     {{--Editor--}}
     <div class="py-3">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -94,7 +93,7 @@
     </div>
 
     {{--Preview Modal--}}
-    <!-- <div class="modal fade" id="preview-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="preview-modal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -115,5 +114,5 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 </x-app-layout>
