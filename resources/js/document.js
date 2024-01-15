@@ -7,8 +7,8 @@
 
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header';
-import Paragraph from "@editorjs/paragraph";
-// import Paragraph from "editorjs-paragraph-with-alignment";
+// import Paragraph from "@editorjs/paragraph";
+import Paragraph from "editorjs-paragraph-with-alignment";
 import List from '@editorjs/list';
 import NestedList from '@editorjs/nested-list';
 import Checklist from '@editorjs/checklist';
@@ -86,7 +86,7 @@ let editor = new EditorJS({
     },
     paragraph: {
       class: Paragraph,
-      inlineToolbar: true
+      // inlineToolbar: true
     },
     list: {
       class: NestedList,
@@ -408,10 +408,37 @@ function handleExportClick() {
       }
       // const edjsParser = edjsHTML();
       // const html = edjsParser.parseStrict(outputData);
-      const html = convertDataToHtml(outputData.blocks);
-      console.log(outputData.blocks);
-      console.log(html);
-      demoFromHTML(html, title);
+      
+      // const html = convertDataToHtml(outputData.blocks);
+      // console.log(outputData.blocks);
+      // console.log(html);
+      // demoFromHTML(html, title);
+      
+      // add title to outputData
+      outputData.title = title;
+      console.log(outputData);
+      let savePromise;
+      // savePromise = axios.get('/generate-pdf');
+      // savePromise.then(function (response) {
+      //   if (response.status === 204) {
+
+      //   } else {
+
+      //   }
+      // }).catch(function (error) {
+      //   console.log(error);
+      //   Swal.fire({
+      //     title: 'Error!',
+      //     text: 'Saving failed',
+      //     icon: 'error',
+      //   });
+      // });
+      axios.get(
+        '/generate-pdf', 
+        {responseType: 'blob'} // !!!
+      ).then((response) => {
+        window.open(URL.createObjectURL(response.data));
+      })
     }).catch((error) => {
       console.log('Saving failed: ', error);
       Swal.fire({
