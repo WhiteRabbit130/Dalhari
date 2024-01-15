@@ -147,10 +147,18 @@ class DocsController extends Controller
      *  endpoint for url data fetching
      */
     public function fetchUrl(Request $request) {
-       
+        // dd($request->url);
+        // dd($request->all());
         $data = array(
             'success' => 1,
-            'link' => "https://codex.so"
+            'link' => $request->url,
+            'meta' => array(
+                'title' => 'Codex Team',
+                'description' => 'Club of web-development, design and marketing. We build team learning how to build full-valued projects on the world market.',
+                'image' => array(
+                    'url' => "https://codex.so/public/app/img/meta_img.png"
+                )
+            )
         );
         return response()->json($data);        
     }
