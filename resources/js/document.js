@@ -28,6 +28,7 @@ import Warning from '@editorjs/warning';
 import Alert from 'editorjs-alert';
 import Marker from '@editorjs/marker';
 import CodeTool from '@editorjs/code';
+import AttachesTool from '@editorjs/attaches';
 import InlineCode from '@editorjs/inline-code';
 import Delimiter from '@editorjs/delimiter';
 import Embed from '@editorjs/embed';
@@ -96,7 +97,7 @@ let editor = new EditorJS({
       class: Image,
       config: {
         endpoints: {
-          byFile: 'http://localhost:8000/uploadFile', // Your backend file uploader endpoint
+          byFile: 'http://localhost:8000/uploadImage', // Your backend file uploader endpoint
           byUrl: 'http://localhost:8000/fetchUrl', // Your endpoint that provides uploading by Url
         },
         additionalRequestHeaders: {
@@ -143,6 +144,15 @@ let editor = new EditorJS({
       config: {
         // todo - figure out how to get this working
         endpoint: 'http://localhost:8000/fetchUrl', // Your backend endpoint for url data fetching
+      }
+    },
+    attaches: {
+      class: AttachesTool,
+      config: {
+        endpoint: 'http://localhost:8000/uploadFile',
+        additionalRequestHeaders: {
+          'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
       }
     },
     raw: RawTool,

@@ -1,0 +1,1 @@
+- `Fix` — Some Block were be skipped on saving after pasting them as HTML

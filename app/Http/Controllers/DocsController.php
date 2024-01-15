@@ -124,13 +124,14 @@ class DocsController extends Controller
     }
 
     /**
-     *  file uploader endpoint
+     *  Image uploader endpoint
      */
-    public function uploadFile(Request $request) {
+    public function uploadImage(Request $request) {
         $request->validate([
             'image' => 'required|image|mimes:png,jpg,jpeg|max:2048'
         ]);
         // $image_path = $request->file('image')->store('image', 'public');
+        // dd($request->all());
         $imageName = time().'.'.$request->image->extension();
         $request->image->move(public_path('images'), $imageName);
         $url = public_path('images').'/'.$imageName;
@@ -138,6 +139,29 @@ class DocsController extends Controller
             'success' => 1,
             'file' => array(
                 'url' => asset('/images/'.$imageName)
+            )
+        );
+        return response()->json($data);        
+    }
+
+    /**
+    *  File uploader endpoint
+    */
+    public function uploadFile(Request $request) {
+        // $file = $request->file;
+        // dd($request->file->getSize());
+        $fileSize = $request->file->getSize();
+        $fileExtension = $request->file->extension();
+        $fileName = time().'.'.$fileExtension;
+        $request->file->move(public_path('uploads'), $fileName);
+        $url = public_path('uploads').'/'.$fileName;
+        $data = array(
+            'success' => 1,
+            'file' => array(
+                'name' => $fileExtension,
+                'title' => $request->file->getClientOriginalName(),
+                'size' => $fileSize,
+                'url' => asset('/uploads/'.$fileName)
             )
         );
         return response()->json($data);        

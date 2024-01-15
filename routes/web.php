@@ -116,6 +116,7 @@ Route::middleware('auth')->group(function () {
     // Get all docs for the user
     Route::get('/docs', [DocsController::class, 'getDocs'])->name('docs.getDocs');
 
+    Route::post('/uploadImage', [DocsController::class, 'uploadImage'])->name('docs.uploadImage');
     Route::post('/uploadFile', [DocsController::class, 'uploadFile'])->name('docs.uploadFile');
     Route::get('/fetchUrl', [DocsController::class, 'fetchUrl'])->name('docs.fetchUrl');
     Route::get('/generate-pdf', [PDFController::class, 'generatePDF'])->name('docs.pdf');
