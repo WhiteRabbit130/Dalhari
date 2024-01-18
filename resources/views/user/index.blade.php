@@ -103,7 +103,6 @@
                         </div>
                     </div>
                     <div class="ms-auto text-secondary">
-
                         <div class="d-flex">
                             <button type="button" id="createUser"  @click.prevent="createUserModal()" class="btn bg-primary ms-auto text-white"><i class="fa-solid fa-plus"></i> Create User</button>
                         </div>
@@ -121,7 +120,6 @@
                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Bio</th>
                         <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Address</th>
                         <th class="text-left p-0 text-uppercase text-secondary text-xs font-weight-bolder opacity-7">Action</th>
-
                     </tr>
                     </thead>
                     <tbody>
@@ -144,7 +142,6 @@
                     </tbody>
                 </table>
             </div>
-
             <div class="modal fade" id="create-user-modal" tabindex="-1" role="dialog" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                     <div class="modal-content">
@@ -152,7 +149,6 @@
                             <h6 class="modal-title mt-1 select-modal-label" id="modal-title-notification">
                                 Create User
                             </h6>
-
                             <button type="button" class="btn-close text-dark me-1" data-bs-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true"><i class="fa fa-close" style="font-size:20px"></i></span>
                             </button>
@@ -168,7 +164,6 @@
                                     <input ref="fileInput" name="photo" type="file" @input="pickFile" style="display:none;"
                                            accept="image/*">
                                 </div>
-
                                 <!-- Image Preview Before Upload(End) -->
 
                                 <div class="row">
