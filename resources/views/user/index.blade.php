@@ -5,9 +5,6 @@
             {{ __('Users') }}
         </h2>
     </x-slot>
-
-
-
     {{--Users Table--}}
     <div class="my-3">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -19,7 +16,6 @@
                                 <div class="spinner-border d-none" role="status">
                                     <span class="visually-hidden">Loading...</span>
                                 </div>
-
                                 <div class="table-responsive all-users-table">
                                     <table class="table align-items-center mb-0">
                                         <thead>
@@ -43,7 +39,6 @@
                                         </thead>
                                         <tbody>
                                         @foreach($users as $n)
-
                                             <tr>
                                                 <td>
                                                     <div>
@@ -69,7 +64,6 @@
                                                     </div>
                                                 </td>
                                             </tr>
-
                                         @endforeach
                                         </tbody>
                                     </table>
