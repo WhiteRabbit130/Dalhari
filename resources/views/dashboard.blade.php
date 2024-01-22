@@ -18,16 +18,12 @@
             <i class="fas fa-gauge mr-1"></i>
             {{ __('Dashboard') }}
         </h2>
-
     </x-slot>
-
     <div class="container mt-3">
-
         <div class="row">
             <div class="col">
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 text-gray-900">
-
                         {{--todo--}}
                         <div class="grid grid-cols-6 gap-4 mb-5">
                             <div class="col-span-full">
@@ -40,7 +36,6 @@
                                                 </p>
                                             </div>
                                         </div>
-
                                         <div class="flex flex-col gap-4">
                                             <div>
                                                 <div class="text-6xl font-bold text-center">
@@ -84,7 +79,6 @@
                                 </div>
                             </div>
                         </div>
-
                         {{--todo--}}
                         <div class="row">
                             <div class="col-sm-6 col-md-6 mt-2">
@@ -98,7 +92,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-sm-6 col-md-6 mt-2">
                                 <div class="dark:bg-gray-800 bg-gray-200 p-4 rounded-lg flex flex-col gap-4">
                                     <div class="flex flex-wrap gap-3 items-center">
@@ -110,7 +103,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-sm-6 col-md-6 mt-2">
                                 <div class="dark:bg-gray-800 bg-gray-200 p-4 rounded-lg flex flex-col gap-4">
                                     <div class="flex flex-wrap gap-3 items-center">
@@ -121,7 +113,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="col-sm-6 col-md-6 mt-2">
                                 <div class="dark:bg-gray-800 bg-gray-200 p-4 rounded-lg flex flex-col gap-4">
                                     <div class="flex-1 overflow-auto dark:bg-gray-800 rounded-t-lg">
