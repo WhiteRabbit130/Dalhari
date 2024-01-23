@@ -2,7 +2,6 @@
        class="z-[90] flex-col flex top-0 bottom-0 fixed md:sticky w-64 md:dark:bg-gray-800 md:bg-gray-100 bg-gray-300/50 dark:bg-gray-800/50
           hover:md:sticky hover:fixed group/aside max-h-screen hover:transition-[width] shadow
           backdrop-blur-xl ">
-
     <div  class=" dark:bg-gray-800/20 md:dark:bg-gray-800 " >
         <a class="flex items-center justify-center gap-x-4 px-8 h-16
                    text-2xl font-medium dark:text-slate-100 text-gray-700 focus:outline-none"
@@ -14,7 +13,6 @@
         </a>
     </div>
     <ul class="overflow-y-auto flex-1 mt-4 mb-7">
-
         <li class="relative group" >
             <button
                     class="flex items-center justify-center md:justify-start w-full  !py-5 pl-3
