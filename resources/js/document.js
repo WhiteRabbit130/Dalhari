@@ -7,9 +7,7 @@
 
 import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header';
-// import Paragraph from "@editorjs/paragraph";
 import Paragraph from "editorjs-paragraph-with-alignment";
-import List from '@editorjs/list';
 import NestedList from '@editorjs/nested-list';
 import Checklist from '@editorjs/checklist';
 import NestedChecklist from '@calumk/editorjs-nested-checklist';
@@ -77,7 +75,6 @@ let editor = new EditorJS({
   tools: {
     header: {
       class: Header,
-      // tunes: ["anyTuneName"],
       inlineToolbar: true,
       shortcut: 'CMD+SHIFT+H',
       config: {
@@ -87,7 +84,6 @@ let editor = new EditorJS({
     },
     paragraph: {
       class: Paragraph,
-      // inlineToolbar: true
     },
     list: {
       class: NestedList,
@@ -106,7 +102,7 @@ let editor = new EditorJS({
       }
     },
     checklist: {
-      class: Checklist,
+      class: NestedChecklist,
       inlineToolbar: true,
     },
     table: Table,
@@ -142,8 +138,7 @@ let editor = new EditorJS({
     linkTool: {
       class: LinkTool,
       config: {
-        // todo - figure out how to get this working
-        endpoint: 'http://localhost:8000/fetchUrl', // Your backend endpoint for url data fetching
+        endpoint: 'http://localhost:8000/fetchUrl', // backend endpoint for url data fetching
       }
     },
     attaches: {
@@ -156,7 +151,6 @@ let editor = new EditorJS({
       }
     },
     raw: RawTool,
-    
     underline: Underline,
     marker: {
       class: Marker,
@@ -226,10 +220,6 @@ document.getElementById('clear')
 // Handle export button click
 document.getElementById('export')
   .addEventListener('click', handleExportClick);
-
-// Handle preview button click
-// document.getElementById('preview')
-//   .addEventListener('click', handlePreviewClick);
 
 function clearEditor() {
   activeDoc = null; // set activeDoc to null
@@ -419,15 +409,15 @@ function handleExportClick() {
       // const edjsParser = edjsHTML();
       // const html = edjsParser.parseStrict(outputData);
       
-      // const html = convertDataToHtml(outputData.blocks);
+      const html = convertDataToHtml(outputData.blocks);
       // console.log(outputData.blocks);
       // console.log(html);
-      // demoFromHTML(html, title);
+      demoFromHTML(html, title);
       
       // add title to outputData
       outputData.title = title;
-      console.log(outputData);
-      let savePromise;
+      // console.log(outputData);
+      // let savePromise;
       // savePromise = axios.get('/generate-pdf');
       // savePromise.then(function (response) {
       //   if (response.status === 204) {
@@ -443,12 +433,12 @@ function handleExportClick() {
       //     icon: 'error',
       //   });
       // });
-      axios.get(
-        '/generate-pdf', 
-        {responseType: 'blob'} // !!!
-      ).then((response) => {
-        window.open(URL.createObjectURL(response.data));
-      })
+      // axios.get(
+      //   '/generate-pdf', 
+      //   {responseType: 'blob'} // !!!
+      // ).then((response) => {
+      //   window.open(URL.createObjectURL(response.data));
+      // })
     }).catch((error) => {
       console.log('Saving failed: ', error);
       Swal.fire({

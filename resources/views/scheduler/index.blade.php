@@ -14,7 +14,6 @@
 
 @endpush
 
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -35,7 +34,6 @@
             let dateTime = setInterval(() => {
                 $('#dateTime').html(moment().format('LLL'))
             }, 1000)
-
 
             const vueApp = Vue.createApp({
                 data() {
@@ -74,7 +72,6 @@
                 },
             });
             vueApp.mount('#vue-app');
-
         </script>
     @endpush
 </x-app-layout>
