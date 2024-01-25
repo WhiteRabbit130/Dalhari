@@ -81,3 +81,11 @@
 /* Desktop only */
 @media (min-width: 640px) {
 }
+
+.ce-header {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5em;
+    font-size: 1.17rem;
+}
