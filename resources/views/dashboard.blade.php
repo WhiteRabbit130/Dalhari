@@ -221,7 +221,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -238,7 +237,6 @@
                         </h3>
 
                         <div class="row">
-
                             {{--Drum Lessons--}}
                             <div class="col-12 col-md-6 mb-2">
                                 <div class="card">
