@@ -227,10 +227,6 @@ document.getElementById('clear')
 document.getElementById('export')
   .addEventListener('click', handleExportClick);
 
-// Handle preview button click
-// document.getElementById('preview')
-//   .addEventListener('click', handlePreviewClick);
-
 function clearEditor() {
   activeDoc = null; // set activeDoc to null
   titleInput.value = ''; // clear title input
@@ -419,15 +415,15 @@ function handleExportClick() {
       // const edjsParser = edjsHTML();
       // const html = edjsParser.parseStrict(outputData);
       
-      // const html = convertDataToHtml(outputData.blocks);
+      const html = convertDataToHtml(outputData.blocks);
       // console.log(outputData.blocks);
       // console.log(html);
-      // demoFromHTML(html, title);
+      demoFromHTML(html, title);
       
       // add title to outputData
-      outputData.title = title;
-      console.log(outputData);
-      let savePromise;
+      // outputData.title = title;
+      // console.log(outputData);
+      // let savePromise;
       // savePromise = axios.get('/generate-pdf');
       // savePromise.then(function (response) {
       //   if (response.status === 204) {
@@ -443,12 +439,12 @@ function handleExportClick() {
       //     icon: 'error',
       //   });
       // });
-      axios.get(
-        '/generate-pdf', 
-        {responseType: 'blob'} // !!!
-      ).then((response) => {
-        window.open(URL.createObjectURL(response.data));
-      })
+      // axios.get(
+      //   '/generate-pdf', 
+      //   {responseType: 'blob'} // !!!
+      // ).then((response) => {
+      //   window.open(URL.createObjectURL(response.data));
+      // })
     }).catch((error) => {
       console.log('Saving failed: ', error);
       Swal.fire({
@@ -460,23 +456,6 @@ function handleExportClick() {
   }
 }
 
-// function handlePreviewClick() {
-//   editor.save().then((outputData) => {
-//     const html = convertDataToHtml(outputData.blocks);
-//     console.log(html);
-//     $('#preview-modal').modal('show');
-//     // document.getElementById('preview').innerHTML = html;
-//     // $('#preview').html(html);
-
-//   }).catch((error) => {
-//     console.log('Saving failed: ', error);
-//     Swal.fire({
-//       title: 'Error!',
-//       text: 'Editor saving failed',
-//       icon: 'error',
-//     });
-//   });
-// }
 /*
 * Docs table
 * - https://datatables.net/
