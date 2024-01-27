@@ -9,12 +9,9 @@ import EditorJS from '@editorjs/editorjs';
 import Header from '@editorjs/header';
 // import Paragraph from "@editorjs/paragraph";
 import Paragraph from "editorjs-paragraph-with-alignment";
-import List from '@editorjs/list';
 import NestedList from '@editorjs/nested-list';
 import Checklist from '@editorjs/checklist';
-import NestedChecklist from '@calumk/editorjs-nested-checklist';
 import Image from "@editorjs/image";
-import SimpleImage from "@editorjs/simple-image";
 import LinkTool from '@editorjs/link';
 import RawTool from '@editorjs/raw';
 import Table from "@editorjs/table";
@@ -36,10 +33,6 @@ import DragDrop from 'editorjs-drag-drop';
 import Undo from 'editorjs-undo';
 import Swal from 'sweetalert2';
 import moment from 'moment';
-
-
-// import edjsHTML from "editorjs-html";
-// import parse from "html-react-parser";
 
 /**
  *  Export
