@@ -9,7 +9,6 @@
             margin: 0 .8rem;
         }
     </style>
-
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.7/css/jquery.dataTables.css"/>
 
     {{--todo - parents.index.css --}}
