@@ -14,7 +14,6 @@
 
 @endpush
 
-
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -57,7 +56,6 @@
                                     <span class="text-sm text-gray-500">@{{user_selected?user_selected.email :''}}</span>
                                 </div>
                             </div>
-
 
                             <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" :class="!user_selected?'hidden':''"
                                     class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm   p-2.5 text-center inline-flex items-center
