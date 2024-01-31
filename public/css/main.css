@@ -8,37 +8,34 @@
 /* *{
     font-family: "Arial", sans-serif;
 } */
-/* p,h1,h2,h3,h4,h5,h6 {
-    font-size: initial; 
-    font-weight: initial;
-} */
+
 h1, h2, h3, h4, h5, h6 {
     /* font-family:  sans-serif; */
     font-weight: bold;
     color: #333; /* Set your preferred text color */
     margin-bottom: 0.5em; /* Adjust as needed for your design */
   }
-  
+
 h1 {
     font-size: 2rem; /* 2 times the base font size */
   }
-  
+
   h2 {
     font-size: 1.5rem; /* 1.5 times the base font size */
   }
-  
+
   h3 {
     font-size: 1.17rem; /* Adjust as needed */
   }
-  
+
   h4 {
     font-size: 1rem; /* Base font size */
   }
-  
+
   h5 {
     font-size: 0.83rem; /* Adjust as needed */
   }
-  
+
   h6 {
     font-size: 0.67rem; /* Adjust as needed */
   }
