@@ -18,7 +18,6 @@
 @push('js')
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
-
     @vite('resources/js/utils.js')
     @vite('resources/js/parents.index.js')
 @endpush
