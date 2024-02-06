@@ -29,7 +29,7 @@
             ],
         }
     </script> -->
-    
+
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="/css/main.css"/>
@@ -77,7 +77,6 @@
         crossorigin="anonymous"
         referrerpolicy="no-referrer"></script>
 
-
 <script src="{{ asset('/assets/jquery/jquery.min.js') }}"></script>
 
 <script src="//cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
@@ -96,7 +95,6 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
-
 
 {{--todo - inputmask are conflicting, can only include one--}}
 {{--    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" ></script>--}}
