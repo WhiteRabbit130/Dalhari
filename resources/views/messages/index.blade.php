@@ -1,5 +1,4 @@
 @push('css')
-
     <link
         href="https://cdn.datatables.net/v/bs5/dt-1.13.8/date-1.5.1/fc-4.3.0/fh-3.4.0/sc-2.3.0/sl-1.7.0/datatables.min.css"
         rel="stylesheet">
@@ -119,7 +118,6 @@
                     }
                 },
                 mounted() {
-
                 },
             });
             vueApp.mount('#vue-app');
