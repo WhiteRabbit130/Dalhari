@@ -62,7 +62,6 @@
 
     </ul>
 
-
     <div class="sticky flex justify-center items-center py-2">
         <a class="rounded-full w-10 h-10 flex items-center justify-center
                    bg-gray-400 dark:bg-slate-900 text-gray-700 dark:text-gray-100" type="button" >
