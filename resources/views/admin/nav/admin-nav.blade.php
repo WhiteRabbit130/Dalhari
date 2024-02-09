@@ -1,23 +1,19 @@
 @push('css')
     <style>
-
         /* todo - not catching, cause included??? */
         #admin-menu-off-canvas {
             /*width: 12px !important;*/
             /*max-width: 23px !important;*/
-
             /*width: 12rem !important;*/
             /*max-width: 23rem !important;*/
             /*background-color: #292727;*/
             /*opacity: .9;*/
             /*color: #fff;*/
         }
-
     </style>
 @endpush
 
 <div class="container-fluid">
-
 
     {{--Menu Button--}}
     <button class="btn btn-secondary bg-secondary px-4" type="button" data-bs-toggle="offcanvas"
