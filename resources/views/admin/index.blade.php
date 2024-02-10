@@ -52,7 +52,6 @@
 @push('js')
 
     <script src='//cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
-
     <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.js"></script>
 
     @vite('resources/js/admin.index.js')
